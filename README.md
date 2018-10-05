@@ -9,7 +9,7 @@ Release [here](https://github.com/Dafirex/Unity-Shaders/releases)
 
 Stuff it has
 - Two variants in shading: Regular darkening and Hue shifting.
-- Two styles: Toon Ramps and A dithering effect
+- Two styles: Toon ramp or a dithering effect
 - Transitions from Realtime and Baked Lighting
 - Static Light can either rotate with world or vertex normals
 - Outlines only the border of the mesh
