@@ -5,6 +5,8 @@ Most likely made with Amplify Shader or Shaderforge because I'm lazy xd
 
 ## Dafirex's Toon Shader
 
+Release [here](https://github.com/Dafirex/Unity-Shaders/releases)
+
 Stuff it has
 - Two variants in shading: Regular darkening and Hue shifting.
 - Two styles: Toon Ramps and A dithering effect
@@ -13,3 +15,4 @@ Stuff it has
 
 **Preview**
 [![Video](https://puu.sh/BFYaY/f601dc85c4.jpg)](https://streamable.com/qmk2q)
+
