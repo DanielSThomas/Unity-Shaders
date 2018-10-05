@@ -12,6 +12,7 @@ Stuff it has
 - Two styles: Toon Ramps and A dithering effect
 - Transitions from Realtime and Baked Lighting
 - Static Light can either rotate with world or vertex normals
+- Outlines only the border of the mesh
 
 **Preview**
 [![Video](https://puu.sh/BFYaY/f601dc85c4.jpg)](https://streamable.com/qmk2q)
