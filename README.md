@@ -1,7 +1,6 @@
 # Unity-Shaders
 Shaders I made for VRchat
 
-Made with Amplify Shader or Shaderforge because I'm lazy xd
 
 ## Dafirex's Toon Shader
 
