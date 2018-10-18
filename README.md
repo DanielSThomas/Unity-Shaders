@@ -1,7 +1,6 @@
 # Unity-Shaders
 Shaders I made for VRchat
 
-Most likely made with Amplify Shader or Shaderforge because I'm lazy xd
 
 ## Dafirex's Toon Shader
 
@@ -16,3 +15,7 @@ Stuff it has
 **Preview**
 [![Video](https://puu.sh/BFYaY/f601dc85c4.jpg)](https://streamable.com/qmk2q)
 
+## Triplanar Coverage 
+- Triplanar Textures and Normals
+- Variant that has only has the triplanar cover
+[![Video](https://puu.sh/BMUBN/96cadbb3b6.jpg)](https://streamable.com/17yx1)
