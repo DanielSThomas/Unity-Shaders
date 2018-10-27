@@ -19,4 +19,5 @@ Stuff it has
 ## Triplanar Coverage 
 - Triplanar Textures and Normals
 - Variant that has only has the triplanar cover
+- Added a variant that takes a heightmap for planes
 [![Video](https://puu.sh/BMUBN/96cadbb3b6.jpg)](https://streamable.com/17yx1)
