@@ -1,6 +1,6 @@
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
-Shader "Dafirex/Slime"
+Shader "Dafirex/Slime/Slime"
 {
 	Properties
 	{
@@ -20,6 +20,8 @@ Shader "Dafirex/Slime"
 		_BandingWeight("Banding Weight", Range(0, 1)) = .5
 		_MeltVal("Melt", Float) = 0
 		_MeshFloor("Floor (Feet)", Float) = 0
+		_Adjustment1("Adjust 1", Float) = 0
+		_Adjustment2("Adjust 2", Float) = 0
 
 	}
 	SubShader
@@ -89,6 +91,10 @@ Shader "Dafirex/Slime"
 
 			fixed _MeltVal;
 			fixed _MeshFloor;
+
+			fixed _Adjustment1;
+			fixed _Adjustment2;
+
 			v2f vert (appdata v)
 			{
 				v2f o;
@@ -97,7 +103,7 @@ Shader "Dafirex/Slime"
 				//Vertex Deform
 				v.vertex.y += (v.vertex.y + 1) * sin(_Time.y) * _Bounce/100;
 				v.vertex.xz -= v.vertex.xz * cos(_Time.y) * _Bounce/100;
-/*
+
 				//Height of where the vertex will start "melting"
 				float melt = ( (v.vertex.y - _MeshFloor) - _MeltVal) * 20;
 				melt = max(0, 1 - melt);
@@ -105,9 +111,9 @@ Shader "Dafirex/Slime"
 				//v.vertex.y = max(min(_MeshFloor, v.vertex.y), min(v.vertex.y, 1 - log(melt) + 1));
 				v.vertex.y -= _MeltVal;
 				if(v.vertex.y < _MeshFloor)
-					v.vertex.y = clamp(_MeshFloor, v.vertex.y, log(melt));
+					v.vertex.y = _MeshFloor * (1 - v.vertex.y) * _Adjustment1 - _Adjustment2;
 				v.vertex.xz += (v.normal.xz * .002) * melt;
-*/
+
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
 
