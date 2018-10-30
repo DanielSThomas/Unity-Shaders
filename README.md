@@ -27,4 +27,5 @@ Stuff it has
 - Can set the "floor" of a mesh for the mesh to melt 
 - Basic Specular lighting
 - Can use a custom cubemap instead of taking in unity environment reflections
+- Distorts with a distortion texture and a grabpass texture
 [![Video](http://puu.sh/BT8pC/4d3b2679c8.jpg)](https://streamable.com/s76s0)
