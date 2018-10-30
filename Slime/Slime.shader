@@ -108,7 +108,7 @@ Shader "Dafirex/Slime/Slime"
 				float melt = ( (v.vertex.y - _MeshFloor) - _MeltVal) * 20;
 				melt = max(0, 1 - melt);
 
-				//v.vertex.y = max(min(_MeshFloor, v.vertex.y), min(v.vertex.y, 1 - log(melt) + 1));
+				//Not a very elegant solution but it works for now
 				v.vertex.y -= _MeltVal;
 				if(v.vertex.y < _MeshFloor)
 					v.vertex.y = _MeshFloor * (1 - v.vertex.y) * _Adjustment1 - _Adjustment2;
