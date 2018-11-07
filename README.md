@@ -29,3 +29,8 @@ Stuff it has
 - Can use a custom cubemap instead of taking in unity environment reflections
 - Distorts with a distortion texture and a grabpass texture
 [![Video](http://puu.sh/BT8pC/4d3b2679c8.jpg)](https://streamable.com/s76s0)
+
+## Retro Shader
+- Pixelates the grabpass texture
+- Posterizes and limits palette
+[![Video](http://puu.sh/BXVBr/19a38bc37c.jpg)](https://puu.sh/BXVb0/8852bea92e.mp4)
