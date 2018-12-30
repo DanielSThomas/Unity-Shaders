@@ -1,0 +1,77 @@
+Shader "Dafirex/Intersection" {
+	Properties {
+		_MainTex("Main Texture", 2D) = "white" {}
+		_DetailTex("Detail Texture", 2D) = "white" {}
+		_Color1("Color 1", Color) = (1, 1, 1, 1)
+		_Color2("Color 2", Color) = (1, 1, 1, 1)
+		_EmissionVal("Emission Value", Float) = 1
+		_DivideDepth("Depth Division", Range(0, 1)) = .5
+		_MulDepth("Depth Multiplier", Float) = 1
+		_PowDepth("Depth Power", Float) = 1
+		_TexMul ("Texture Multiplier", Float) = 1
+		_Opacity ("Opacity", Range(0, 1)) = 1
+	}
+	SubShader {
+		Tags { 
+			"RenderType"="Transparent" 
+			"Queue" = "Transparent"
+			"IsEmissive" = "true" 
+			}
+		LOD 200
+
+		Cull Off
+
+		CGPROGRAM
+		#include "UnityShaderVariables.cginc"
+		#include "UnityCG.cginc"
+		// Physically based Standard lighting model, and enable shadows on all light types
+		#pragma surface surf Standard alpha:fade keepalpha noshadow 
+
+		// Use shader model 3.0 target, to get nicer looking lighting
+		#pragma target 3.0
+
+		sampler2D _MainTex;
+		sampler2D _DetailTex;
+		sampler2D _CameraDepthTexture;
+
+		fixed4 _Color1;
+		fixed4 _Color2;
+		
+		fixed _DivideDepth;
+		fixed _MulDepth;
+		fixed _PowDepth;
+		fixed _TexMul;
+		fixed _Opacity;
+		fixed _EmissionVal;
+
+		struct Input {
+			float2 uv_MainTex;
+			float2 uv_DetailTex;
+			float4 screenPos; 
+		};
+
+
+		void surf (Input i, inout SurfaceOutputStandard o){
+			//float4 screenPosition = float4(i.screenPos.xyz, i.screenPos.w + )
+			fixed2 newUV = fixed2(i.uv_MainTex.x, i.uv_MainTex.y - _Time.x);
+			fixed2 detail = tex2D(_DetailTex, newUV);
+			detail.x += _Time.x * 2;
+			fixed intersectCol = tex2D(_MainTex, detail * _TexMul);
+
+			//Depth Fade 
+			float4 screenPosition = float4(i.screenPos.xyz, i.screenPos.w + 0.00000000001);
+			float4 screenNormal = screenPosition / screenPosition.w;
+			fixed screenDepth = LinearEyeDepth(UNITY_SAMPLE_DEPTH(tex2Dproj(_CameraDepthTexture,UNITY_PROJ_COORD(screenPosition))));
+			fixed distDepth = abs((screenDepth - LinearEyeDepth(screenNormal.z)) * _DivideDepth);
+			distDepth = _MulDepth * pow(distDepth, _PowDepth);
+
+			intersectCol = 1 - clamp(lerp(1 - _Opacity, intersectCol, distDepth), 0, _Opacity);
+
+			fixed4 col = lerp(_Color1, _Color2, intersectCol) * _EmissionVal;
+
+			o.Emission = col;
+			o.Alpha = intersectCol;
+		}
+		ENDCG
+	}
+}

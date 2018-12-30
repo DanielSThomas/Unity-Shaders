@@ -1,5 +1,5 @@
 # Unity-Shaders
-Shaders I made for VRchat
+Shaders I made for use in VRchat/Unity
 
 
 ## Dafirex's Toon Shader
@@ -34,3 +34,10 @@ Stuff it has
 - Pixelates the grabpass texture
 - Posterizes and limits palette
 [![Video](http://puu.sh/BXVBr/19a38bc37c.jpg)](https://puu.sh/BXVb0/8852bea92e.mp4)
+
+
+## Depth Intersection Shader
+- Creates an outline when another mesh intersects with it
+- Uses depth blending
+
+[![Video](http://dafire.xyz/p181n2.png)](https://streamable.com/18ms1)
