@@ -1,5 +1,5 @@
 # Unity-Shaders
-Shaders I made for VRchat
+Shaders I made for use in VRchat/Unity
 
 
 ## Dafirex's Toon Shader
