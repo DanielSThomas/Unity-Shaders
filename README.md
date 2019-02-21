@@ -43,7 +43,7 @@ Stuff it has
 [![Video](http://dafire.xyz/p181n2.png)](https://streamable.com/18ms1)
 
 
-## Kinda-Volumetric Shader
+## Kinda-Volumetric Shader (Pseudo-Volumetric?)
 - **Requires the Depth Buffer**
 - In terms of VRchat this can be achived by adding a real time light with shadows
 - You can have the light affect a layer that doesn't light anything up to save some drawcalls 
