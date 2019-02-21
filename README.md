@@ -33,7 +33,7 @@ Stuff it has
 ## Retro Shader
 - Pixelates the grabpass texture
 - Posterizes and limits palette
-[![Video](http://puu.sh/BXVBr/19a38bc37c.jpg)](https://puu.sh/BXVb0/8852bea92e.mp4)
+[![Video](http://puu.sh/BXVBr/19a38bc37c.jpg)](https://streamable.com/gqe9s)
 
 
 ## Depth Intersection Shader
