@@ -33,7 +33,7 @@ Stuff it has
 ## Retro Shader
 - Pixelates the grabpass texture
 - Posterizes and limits palette
-[![Video](http://puu.sh/BXVBr/19a38bc37c.jpg)](https://puu.sh/BXVb0/8852bea92e.mp4)
+[![Video](http://puu.sh/BXVBr/19a38bc37c.jpg)](https://streamable.com/gqe9s)
 
 
 ## Depth Intersection Shader
@@ -41,3 +41,12 @@ Stuff it has
 - Uses depth blending
 
 [![Video](http://dafire.xyz/p181n2.png)](https://streamable.com/18ms1)
+
+
+## Kinda-Volumetric Shader
+- **Requires the Depth Buffer**
+- In terms of VRchat this can be achived by adding a real time light with shadows
+- You can have the light affect a layer that doesn't light anything up to save some drawcalls 
+- Uses Fresnel and Depth-fading for edge softness
+
+[![Video](http://dafire.xyz/nG9C27.png)](https://streamable.com/gqe9s)
