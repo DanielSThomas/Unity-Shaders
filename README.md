@@ -49,4 +49,4 @@ Stuff it has
 - You can have the light affect a layer that doesn't light anything up to save some drawcalls 
 - Uses Fresnel and Depth-fading for edge softness
 
-[![Video](http://dafire.xyz/nG9C27.png)](https://streamable.com/gqe9s)
+[![Video](http://dafire.xyz/nG9C27.png)](https://streamable.com/j3tsx)
